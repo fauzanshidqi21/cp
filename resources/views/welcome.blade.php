@@ -20,7 +20,7 @@
                 <div class="col-lg-3 col-md-6 col mb-2" data-aos="flip-left">
                     <div class="bg-white rounded-3 shadow p-3 d-flex justify-content-between align-items-center">
                         <div>
-                            <p>Koleksi <br> Buku</p>
+                            <p>Koleksi <br> Perpustakaan</p>
                         </div>
                         <img src="{{ asset('assets/icons/ic-book.png') }}" height="40" width="40" alt="">
                     </div>
