@@ -36,24 +36,6 @@
                     <a class="nav-link active" href="/login">Login</a>
                 </li>
                 </ul>
-                
-                    <div class="form-check form-switch mx-4">
-                        <input
-                        class="form-check-input p-2" 
-                        type="checkbox"
-                        role="switch"
-                        id="flexSwitchCheckChecked"
-                        checked
-                        onclick="myFunction()"
-                        />
-                    </div>
-                    <script>
-                        function myFunction(){
-                            var element = document.body;
-                            element.dataset.bsTheme =
-                            element.dataset.bsTheme == "light" ? "dark" : "light";
-                        }
-                    </script>
                 </body>
                 <div class="d-flex">
                     @auth
