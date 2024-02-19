@@ -10,9 +10,9 @@
             <a href="{{ route ('blog.create') }}" class="btn btn-primary">Buat Artikel</a>
 
             {{-- Pesan Sukses --}}
-            @if (session()->has('succes'))
-                <div class="alert alert-succes alert-dismissible fade show" role="alert">
-                    <strong>Informasi</strong> {{ session('succes') }}
+            @if (session()->has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Informasi</strong> {{ session('success') }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif

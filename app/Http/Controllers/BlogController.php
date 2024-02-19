@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
-use Intervention\Image\ImageManagerStatic  as Image;
+use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
@@ -49,7 +49,7 @@ class BlogController extends Controller
         $request->file('image')->storeAs('public/artikel', $fileName);
 
         # Artikel
-        $storage = "../../../public/storage/content-artikel";
+        $storage = "storage/content-artikel";
         $dom = new \DOMDocument();
 
         # untuk menonaktifkan kesalahan libxml standar dan memungkinkan penanganan kesalahan pengguna.
@@ -70,7 +70,6 @@ class BlogController extends Controller
                 $fileNameContentRand = substr(md5($fileNameContent), 6, 6) . '_' . time();
                 $filePath = ("$storage/$fileNameContentRand.$mimetype");
                 $image = Image::make($src)->resize(1440, 720)->encode($mimetype, 100)->save(public_path($filePath));
-                $image->save(public_path("storage\\$filePath"));
                 $new_src = asset($filePath);
                 $img->removeAttribute('src');
                 $img->setAttribute('src', $new_src);
@@ -155,7 +154,6 @@ class BlogController extends Controller
                 $fileNameContentRand = substr(md5($fileNameContent), 6, 6) . '_' . time();
                 $filePath = ("$storage/$fileNameContentRand.$mimetype"); 
                 $image = Image::make($src)->resize(1440, 720)->encode($mimetype, 100)->save(public_path($filePath));
-                $image->save(public_path("storage\\$filePath"));
                 $new_src = asset($filePath);
                 $img->removeAttribute('src');
                 $img->setAttribute('src', $new_src);
